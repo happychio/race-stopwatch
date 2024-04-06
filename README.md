@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Race Stopwatch Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Race Stopwatch project is a React-based application designed for tracking time and laps for different race distances. Ideal for organizing and monitoring time-based events like marathons or racing competitions, this app supports multiple race distances and showcases finisher times in an organized manner.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Multiple Race Distances:** Supports tracking for 1.5km, 3km, and 5km races.
+- **Lap Time Recording:** Allows for the recording of lap times for each race distance.
+- **Dynamic Lap Tables:** Displays a table of finisher positions and their corresponding finish times, updating in real-time as new laps are recorded.
+- **Customizable Themes:** Features different themes for stopwatches based on the race distance.
+- **Organizer Logos:** Displays logos of event organizers or sponsors at the top of the application.
 
-### `npm start`
+## How to Use
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Start a Race Timer:** Select the desired race distance and click on the "Start" button to begin timing.
+2. **Record Laps:** Click the "Lap" button to record a lap time. Lap times are displayed in reverse order, with the most recent lap appearing at the top of its respective table.
+3. **Stop and Reset:** Use the "Stop" button to pause the timer and the "Reset" button to clear the current time.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. Clone this repository to your local machine.
+2. Navigate to the project directory and install dependencies with `npm install`.
+3. Start the application with `npm start`. The app will be available at `localhost:3000`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+- **React:** A JavaScript library for building user interfaces.
+- **CSS:** For custom styling and themes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- `App.js`: The main component that renders stopwatches and lap tables for each race distance.
+- `Stopwatch.js`: A stopwatch component for individual race distances.
+- `App.css`: Stylesheet for the application.
+- `assets/`: Contains images such as organizer logos.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributing
 
-### `npm run eject`
+Contributions to the Race Stopwatch project are welcome! Whether it's submitting bug reports, feature requests, or contributing code, your input is appreciated.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## License
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is open-source and available under the [MIT License](LICENSE.md).
