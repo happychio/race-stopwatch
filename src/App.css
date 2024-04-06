@@ -1,3 +1,13 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #121212; /* Dark mode background color */
+  color: #E0E0E0; /* Light text color for contrast */
+}
+
 .App {
   text-align: center;
 }
@@ -7,32 +17,144 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App-header {
+  background-color: #1F1B24;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.organizer-logos {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust the gap to manage spacing between logos */
+  margin-top: 20px; /* Additional spacing from the header title */
 }
+
+.organizer-logos img {
+  height: 60px; /* Adjust based on your logo sizes for uniformity */
+  width: auto;
+  object-fit: contain;
+}
+
 
 .App-link {
-  color: #61dafb;
+  color: #BB86FC; /* Purple accent for links, enhancing the dark theme */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Base stopwatch style adapted for dark mode */
+.stopwatch {
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #FFF; /* White text for readability */
+  background-color: #333333; /* Darker background for stopwatch */
+  flex: 1;
+  min-width: 280px;
+  max-width: calc(33% - 40px);
+}
+
+.stopwatches-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Theme colors for different race distances in dark mode */
+.orange-theme {
+  background-color: #FF9100; /* Brighter orange for visibility */
+  border: 1px solid #DD8600;
+}
+
+.blue-theme {
+  background-color: #0D47A1; /* Bright blue for contrast */
+  border: 1px solid #0C419A;
+}
+
+.pink-theme {
+  background-color: #EC407A; /* Vivid pink maintained for consistency */
+  border: 1px solid #E91E63;
+}
+
+.time-display {
+  font-size: 6rem;
+  letter-spacing: -0.05em;
+}
+
+.distance {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 1.2rem; /* Adjusted for readability */
+  background-color: #424242; /* Darker for contrast */
+  color: #FFF; /* Maintained white for clarity */
+  border: 1px solid #616161; /* Subtle border for depth */
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #535353; /* Lighten on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+button:disabled {
+  background-color: #2C2C2C; /* Darken to indicate disabled state */
+  color: #757575;
+  border-color: #3E3E3E;
+}
+
+/* Table styling for legibility */
+table {
+  color: #E0E0E0; /* Ensures text is legible in dark mode */
+  background-color: #333; /* Dark background for contrast */
+}
+
+th, td {
+  border: 1px solid #444; /* Softer border color */
+}
+
+th {
+  background-color: #2C2C2C; /* Slightly darker header for emphasis */
+}
+
+/* Consider adding a max-height and overflow-y: auto to the table container for scrollable laps */
+.laps-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+  gap: 20px; /* Gap between columns */
+}
+
+.lap-table {
+  background-color: #333;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.lap-table table {
+  width: 100%; /* Ensure the table fills its container */
+  border-collapse: collapse; /* Collapse borders for a cleaner look */
+}
+
+.lap-table th,
+.lap-table td {
+  padding: 10px; /* Add padding to table cells */
+  text-align: center; /* Center-align table content */
+}
+
+.lap-table th {
+  background-color: #555; /* Darker background for table headers */
+  color: #fff; /* White text color for headers */
+}
+
+.lap-table tbody tr:nth-child(even) {
+  background-color: #444; /* Alternate row background color */
 }
